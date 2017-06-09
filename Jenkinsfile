@@ -4,6 +4,6 @@ node {
     }
 
     stage ('debug') {
-        bat 'env'
+        bat 'powershell -command gci env:'
     }
 }
