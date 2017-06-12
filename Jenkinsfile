@@ -5,6 +5,7 @@ node {
 
     stage ('debug') {
         bat 'powershell -command gci env:'
+        bat 'powershell -command gci -Recurse'
     
         if (BRANCH_NAME == 'master') {
 
