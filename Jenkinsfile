@@ -13,7 +13,7 @@ node {
                 echo 'Let\'s package because we\'re in master'
             }       
             stage ('publish') {
-                echo 'Let\'s package because we\'re in master'
+                echo 'Let\'s publish because we\'re in master'
             }       
             
         }
