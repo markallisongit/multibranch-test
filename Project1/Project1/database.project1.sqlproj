@@ -60,7 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Table1.sql" />
-    <Build Include="Table2.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="database.project1.publish.xml" />
