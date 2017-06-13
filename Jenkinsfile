@@ -4,12 +4,18 @@ node {
     }
 
     stage ('debug') {
-        bat 'powershell -command gci env:'
-    }
+        bat 'powershell -command "gci env: | fl"'
+        bat 'powershell -command gci -Recurse'
+    
+        if (BRANCH_NAME == 'master') {
 
-    if (BRANCH_NAME == 'master') {
-        echo 'Let\'s package because we\'re in master'
-    } else {
-        echo 'Skipping packaging because that\'s reserved for master branch'
+            stage ('package') {
+                echo 'Let\'s package because we\'re in master'
+            }       
+            stage ('publish') {
+                echo 'Let\'s publish because we\'re in master'
+            }       
+            
+        }
     }
 }
